@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYU-Idaho Racing</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Encode+Sans+Condensed:wght@300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+    <header>
+        <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick = "closeNav()">&times;</a>
+                <div class="navMain">
+                <div class="navcontainer">
+                    <a class="navbutton" href="index.html">HOME PAGE</a>
+                    <a class="navbutton" href="meetteams.html">MEET OUR TEAMS</a>
+                    <a class="navbutton" href="events.html">TEAM EVENTS</a>
+                    <a class="navbutton" href="contact.html">CONTACT US</a>
+                    <a class="navbutton" href="sponsors.html">SPONSORS</a>
+                </div>
+                
+            </div>
+        </div>
+        <span class="menuicon" style="font-size:30px;cursor:pointer" onclick="openNav()"><img class="navicon" src="images/Hamburger_icon.svg.png" alt=""></span>
+
+        <script>
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "100%";
+                document.body.style.backgroundColor = "rgba(7,43,82,0.4)";
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.body.style.backgroundColor = "white";
+            }
+
+
+
+
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("ProjectMySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+
+            
+        </script>
+        <div class="HeaderBar">
+            <a href="index.html" id="logo_link">
+                <img class="logo" src="images/BYU_Idaho_Racing_Logo_V2.webp" alt="BYU-Idaho Racing Logo">
+            </a>
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+    </header>
+    <div class="TeamHeaderBottom"></div>
+
+    <section class="TeamTitle2">
+        <h1>ELECTRICAL</h1>
+            <div class="TitleBannerLarge"></div>
+            <div class="TitleBannerSmall1"></div>
+            <div class="TitleBannerSmall2"></div>
+        </div>
+    </section>
+
+
+    <section class="Team1AboutUs">
+        <div class="TeamHero">
+        </div>
+        <div class="TeamHeroText2">
+            <h2>
+                ABOUT US
+            </h2>
+            <p>
+Our goal is to design and build the high and low voltage systems for the car. Our projects include building a 500 V Lithium-Ion battery pack, setting up a battery management system, configuring an automatic safety shutdown system, and designing the power delivery from the battery to the motor.
+            </p>
+        </div>
+    </section>
+
+
+
+    <div class="ProjectHolder">
+
+        <div class="ProjectArrowContainer">
+            <a onclick="plusSlides(1)" class="NextArrow">
+            </a>
+            <a onclick="plusSlides(-1)" class="PrevArrow">
+                
+            </a>
+        </div>
+        <div class="ProjectTitleHolder">
+            <h2>PROJECTS</h2>
+        </div>
+        <section class="CarouselProject">
+
+            <div class="ProjectCarouselContainer">
+            
+                    <div class="ProjectMySlides fade">
+                        <div class="ProjectDisplayContainer">
+                            <div class="ProjectContainerText1">
+                                <div class="ProjectTextHeader">
+                                    <h3>BATTERY PACK</h3>
+                                </div>
+                                <div class="ProjectBodyText">
+                                    <p>
+Our battery pack needs to power the car for all three racing events, including an acceleration event, dynamic event, and endurance event. This means the battery must be high power to meet acceleration demands, while still enduring an hour long endurance race. We are working with a local company, Grand Teton Energy Systems to build the custom pack in a safe way. We are using the BAK INR-21700 cell, which has both high power output and a high energy capacity.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ProjectImageContainer1">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="ProjectMySlides fade">
+                        <div class="ProjectDisplayContainer">
+                            <div class="ProjectContainerText2">
+                                <div class="ProjectTextHeader">
+                                    <h3>BATTERY CONTAINER</h3>
+                                </div>
+                                <div class="ProjectBodyText">
+                                    <p>
+                                    The construction of our custom battery also requires a safe container to house our battery pack and high voltage circuitry. Designing this box is difficult due to the limited space in our car, while still keeping our center of gravity low. Our box must also be mechanically robust, electrically insulative, and watertight, as it will need to isolate a lethal voltage from the rest of the car at all times.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ProjectImageContainer2">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="ProjectMySlides fade">
+                        <div class="ProjectDisplayContainer">
+                            <div class="ProjectContainerText3">
+                                <div class="ProjectTextHeader">
+                                    <h3>BMS</h3>
+                                </div>
+                                <div class="BMS">
+                                    <p>
+                                       Having over 500 lithium cells in one place requires constant care to ensure the batteries remain temperature controlled, balanced, and monitored in case of a fault. The BMS connects to each of the cells and takes measurements such as voltage, temperature, current, internal resistance, and much more. We are using the Orion BMS 2 system which has many features to allow us to use the cells safely. The BMS is able to shut down the battery in case of emergency, as well as provide essential information to the driver such as the battery state of charge or faults in the battery.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ProjectImageContainer3">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ProjectMySlides fade">
+                        <div class="ProjectDisplayContainer">
+                            <div class="ProjectContainerText2">
+                                <div class="ProjectTextHeader">
+                                    <h3>SHUTDOWN SYSTEM</h3>
+                                </div>
+                                <div class="ProjectBodyText">
+                                    <p>
+                                   Throughout the car, there are a number of points where the car can be shut off. This can be done manually, through big red buttons and shutdown switches, or automatically through the BMS, brake over-travel switch, or any of our Control Units throughout the car. All these shutdown points will directly control isolation relays, so that in the case of an emergency, the High voltage systems would be isolated in a matter of milliseconds.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ProjectImageContainer2">
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="ProjectMySlides fade">
+                        <div class="ProjectDisplayContainer">
+                            <div class="ProjectContainerText2">
+                                <div class="ProjectTextHeader">
+                                    <h3>HIGH VOLTAGE SYSTEMS</h3>
+                                </div>
+                                <div class="ProjectBodyText">
+                                    <p>
+                                    To deliver power from the batteries to the motor, there are many different systems required. The batteries provide direct current, though the motor receives three phase alternating current, which is converted with the inverter. The batteries also require a slow start due to the large capacitors in the inverter, which react to quick changes in voltage. Because of this, we designed a pre-charge and discharge circuit to protect our high voltage systems.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ProjectImageContainer2">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+    </div>
+
+    <section class="TeamLead">
+        <div class="TeamLeadHero">
+        </div>
+        <div class="TeamLeadText">
+            <h3>TEAM LEAD - DALLIN HAMMOND</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+        <div class="TeamDivider"></div>
+    </section>
+
+    <footer>
+    <div class="FooterTop"></div>
+<div class="LogoFooter"></div>
+<a href="contact.html" class="FooterItem">CONTACT US</a>
+<a href="sponsors.html" class="FooterItem">SPONSORS</a>
+<a href="events.html" class="FooterItem">EVENTS</a>
+<a href="#" class="Socials"></a>
+    </footer>
+    
+    </div>
+    </body>
+    </html>

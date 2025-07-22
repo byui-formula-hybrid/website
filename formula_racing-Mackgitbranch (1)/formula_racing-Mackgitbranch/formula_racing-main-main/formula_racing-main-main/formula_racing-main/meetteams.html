@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYU-Idaho Racing</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Encode+Sans+Condensed:wght@300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="MeetContent">
+    <header>
+        <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick = "closeNav()">&times;</a>
+                <div class="navMain">
+                <div class="navcontainer">
+                    <a class="navbutton" href="index.html">HOME PAGE</a>
+                    <a class="navbutton" href="meetteams.html">MEET OUR TEAMS</a>
+                    <a class="navbutton" href="events.html">TEAM EVENTS</a>
+                    <a class="navbutton" href="contact.html">CONTACT US</a>
+                    <a class="navbutton" href="sponsors.html">SPONSORS</a>
+                </div>
+                
+            </div>
+        </div>
+        <span class="menuicon" style="font-size:30px;cursor:pointer" onclick="openNav()"><img class="navicon" src="images/Hamburger_icon.svg.png" alt=""></span>
+
+        <script>
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "100%";
+                document.body.style.backgroundColor = "rgba(7,43,82,0.4)";
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.body.style.backgroundColor = "white";
+            }
+
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("MySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+
+            
+        </script>
+        <div class="HeaderBar">
+            <a href="index.html" id="logo_link">
+                <img class="logo" src="images/BYU_Idaho_Racing_Logo_V2.webp" alt="BYU-Idaho Racing Logo">
+            </a>
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+    </header>
+    <div class="headerbottom"></div>
+    
+    <div class="Meet_headContainer">
+
+    
+    <div class="MeetTop">
+    </div>
+    <h1 class="MeetH1">MEET OUR TEAMS</h1>
+    <div class="MeetBottom">
+
+    </div>
+</div>
+    <div class="TeamHolder">
+        <div class="TeamText">
+            <h2>
+                ABOUT OUR TEAMS
+            </h2>
+            <p>
+The BYU-Idaho Formula Racing Team is divided into two main branches—Mechanical and Electrical—with each encompassing specialized subteams focused on building a fully electric, Formula-style race car. This structure gives students the opportunity to gain in-depth, hands-on experience in real engineering roles while contributing to a high-performance vehicle.
+            </p>
+        </div>
+        <div class="ArrowContainer">
+            <a onclick="plusSlides(1)" class="NextArrow">
+            </a>
+            <a onclick="plusSlides(-1)" class="PrevArrow">
+                
+            </a>
+    </div>
+        <section class="CarouselTeam">
+            <div class="CarouselContainer">
+            
+                   <div class="MySlides fade">
+                        <div class="TeamContainer">
+                        <div class="TeamHeader"><h3>
+                            Powertrain
+                        </h3>
+                    </div>
+                        <a class="LearnTeam" href="team.html">
+                            LEARN MORE
+                        </a>
+                        <img src="images/Pizza Team.png" id="PizzaTeam" alt="PizzaTeam">
+                        </div>
+                    </div>
+
+                    
+                    <div class="MySlides fade">
+                        <div class="TeamContainer">
+                        <div class="TeamHeader"><h3>
+                            Electrical
+                        </h3>
+                    </div>
+                        <a class="LearnTeam" href="Electrical.html">
+                            LEARN MORE
+                        </a>
+                        
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+    </div>
+
+    <div class=footer>
+    <div class="FooterTop"></div>
+<div class="LogoFooter"></div>
+<a href="contact.html" class="FooterItem">CONTACT US</a>
+<a href="sponsors.html" class="FooterItem">SPONSORS</a>
+<a href="events.html" class="FooterItem">EVENTS</a>
+<a href="#" class="Socials"></a>
+    </div>
+    
+    </div>
+    </body>
+    </html>
