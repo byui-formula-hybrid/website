@@ -8,3 +8,6 @@ on:
 jobs:
   notify-discord:
     uses: byui-formula-hybrid/.github/.github/workflows/discord-pr-notification.yml@main
+    secrets:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      DISCORD_ROLE_ID: ${{ secrets.DISCORD_ROLE_ID }}
