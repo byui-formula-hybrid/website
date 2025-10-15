@@ -1,0 +1,10 @@
+name: Notify Discord on Merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-discord:
+    uses: byui-formula-hybrid/Core/.github/workflows/discord-merge-notify.yml@main
