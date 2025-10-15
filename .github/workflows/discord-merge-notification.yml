@@ -7,4 +7,4 @@ on:
 
 jobs:
   notify-discord:
-    uses: byui-formula-hybrid/Core/.github/workflows/discord-merge-notify.yml@main
+    uses: byui-formula-hybrid/.github/.github/workflows/discord-merge-notification.yml@main
