@@ -29,9 +29,9 @@ h1, h2, h3, h4{
     font-family: "Chakra Petch" ;
 }
 .HeaderBar{
-    clip-path: polygon(0px 0px, 233px 0px, 170.5px 62.5px, 0px 62.5px);
-    background-color: rgb(255, 255, 255);
-    }
+    display: flex;
+    align-items: center;
+}
 
 .LearnMoreChassis{
     width:13vw;
@@ -61,47 +61,18 @@ h1, h2, h3, h4{
 }
 header{
     position: fixed;
-    background-image: url(BannerBackground.png);
-    width: 100%;
-    height: 62.5px;
-    background-size: auto 101%;
-
-    background-position: bottom 0px right -62.5px;
-    top: 0px;
+    top: 0;
+    left: 0;
     z-index: 10;
-    background-color: rgba(7, 43, 82, 0);
-
-    animation: colorIn 1s forwards;
-
-    display: grid;
-    grid-template-columns: 70px 233px auto;
-}
-
-.headerbottom{
     width: 100%;
-    height: 47px;
-    animation: headershadow linear forwards;
-    animation-timeline: scroll(y);
-    
-    position: fixed;
-    margin-left: 0px;
-    margin-top: 12.5px;
-    background-color: white;
-    z-index: 9;
-}
-
-
-.headerbottom2{
-    width: 100%;
-    height: 47px;
-    animation: headershadow linear forwards;
-    animation-timeline: scroll(y);
-    
-    position: fixed;
-    margin-left: -144px;
-    margin-top: -131.5px;
-    background-color: white;
-    z-index: 9;
+    height: 84px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #072b52;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .CarHoverText{
@@ -132,45 +103,50 @@ header{
 
 
 
-@keyframes headershadow{
-    5%{
-    box-shadow: 0px 5px 98px black;
-    height: 40px
-    }
-    100%{
-    box-shadow: 0px 5px 98px black;
-    height: 40px 
-    }
-}
-
-.headerbottom-scrolled {
-    transform: translateY(-20px); /* Moves the header up slightly */
-  }
-@keyframes colorIn{
-    100%{background-color: #072b52;
-    }
-}
 .logo{
     grid-column: 2/3;
     width: 150px; /*Change to a relative value*/
     margin-top: -10px;
+}
+/* Header logo: the image has wide transparent margins (art spans rows 158-369 of 537).
+   aspect-ratio + object-fit crop only those margins; the artwork is not scaled unevenly. */
+header .logo{
+    display: block;
+    height: 52px;
+    width: auto;
+    aspect-ratio: 955 / 212;
+    object-fit: cover;
+    object-position: 50% 48.6%;
+    margin: 0;
 }
 span{
     grid-column: 1/2;
     margin-top: 10px;
 }
 .menuicon{
-    background-color: white;
-    margin-top: 0px;
-    padding: 9.5px;
-    height: 62.5px;
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 -8px;
+    padding: 8px;
+    cursor: pointer;
 }
 /* SIDEBAR NAVIGATION WITH OPACITY */
 
 .navicon{
-    width: 50px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1); /* navy source icon -> white */
+}
+
+@media (max-width: 600px){
+    header{
+        height: 64px;
+        padding: 0 16px;
+        gap: 8px;
+    }
+    header .logo{
+        height: 40px;
+    }
 }
 
 .sidenav {
@@ -1255,18 +1231,6 @@ height: 100%;
     width: 230%;
     clip-path: polygon(0% 0%, 44% 0%, 90% 60%, 50% 65%);
     margin-left: -5.6vw;
-}
-
-.TeamHeaderBottom {
-    width: 100%;
-    height: 47px;
-    animation: headershadow linear forwards;
-    animation-timeline: scroll(y);
-    position: fixed;
-    margin-left: 0px;
-    margin-top: -126.5px;
-    background-color: white;
-    z-index: 9;
 }
 
 .TeamLead{
