@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- White rounded tile with a transparent "in" glyph, matching the footer's Instagram/Facebook tiles in styles/SocialIcons.png -->
+  <mask id="linkedin-glyph">
+    <rect width="100" height="100" fill="#fff"/>
+    <g fill="#000" transform="translate(-3 0)">
+      <circle cx="30" cy="27" r="7"/>
+      <rect x="23.5" y="39" width="13" height="41"/>
+      <path d="M44 39h12.5v6c2.6-4.5 7.5-7 13-7 9 0 13.5 5.5 13.5 16v26h-13V56.5c0-5-1.8-8-6-8s-7 3-7 8V80H44z"/>
+    </g>
+  </mask>
+  <rect width="100" height="100" rx="19" fill="#fff" mask="url(#linkedin-glyph)"/>
+</svg>
