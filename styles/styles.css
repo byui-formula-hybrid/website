@@ -474,6 +474,9 @@ footer p{
     height: 152.5px;
     display: grid;
     background-color:#1480f5;
+    /* .footer is now a <footer>: cancel the element rules so the blue footer looks unchanged */
+    background-image: none;
+    width: auto;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -642,7 +645,7 @@ margin-top: 0.7vw;
     transform: scale(1.1,1.1);
 }
 
-.mySlides {display: none;
+.MySlides {display: none;
 }
 
 .fade {
@@ -985,7 +988,7 @@ margin-top: 0.7vw;
     z-index: 4;
 }
 
-.ProjectmySlides {display: none;
+.ProjectMySlides {display: none;
 
 }
 
