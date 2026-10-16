@@ -47,37 +47,30 @@
 
 
             let slideIndex = 1;
-            showSlides(slideIndex);
+            document.addEventListener("DOMContentLoaded", function () {
+                showSlides(slideIndex);
+            });
 
             function plusSlides(n) {
             showSlides(slideIndex += n);
             }
 
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
-            }
-
             function showSlides(n) {
             let i;
             let slides = document.getElementsByClassName("ProjectMySlides");
-            let dots = document.getElementsByClassName("dot");
             if (n > slides.length) {slideIndex = 1}    
             if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
             slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
             }
 
             
         </script>
         <div class="HeaderBar">
             <a href="index.html" id="logo_link">
-                <img class="logo" src="images/BYU_Idaho_Racing_Logo_V2.webp" alt="BYU-Idaho Racing Logo">
+                <img class="logo" src="images/BYU_Idaho_Racing_Logo_V2_dark.png" alt="BYU-Idaho Racing Logo">
             </a>
         
             
@@ -101,16 +94,16 @@
 
 
             
+        </div>
     </header>
-    <div class="TeamHeaderBottom"></div>
 
     <section class="TeamTitle">
         <h1>POWERTRAIN</h1>
             <div class="TitleBannerLarge"></div>
             <div class="TitleBannerSmall1"></div>
             <div class="TitleBannerSmall2"></div>
-        </div>
     </section>
+    </div> <!-- end #content -->
 
 
     <section class="Team1AboutUs">
@@ -161,9 +154,6 @@ In order to transfer power train sends energy through the differential which the
                     </div>
 
                         
-                        </div>
-                    </div>
-
                 </div>
         </section>
     </div>
@@ -184,15 +174,26 @@ In order to transfer power train sends energy through the differential which the
         <div class="TeamDivider"></div>
     </section>
 
-    <footer>
-    <div class="FooterTop"></div>
-<div class="LogoFooter"></div>
-<a href="contact.html" class="FooterItem">CONTACT US</a>
-<a href="sponsors.html" class="FooterItem">SPONSORS</a>
-<a href="events.html" class="FooterItem">EVENTS</a>
-<a href="#" class="Socials"></a>
+    <footer class="site-footer">
+        <a class="site-footer__brand" href="index.html">
+            <img src="styles/BYU%20Idaho%20Racing%20Logo%20V2.png" alt="BYU-Idaho Racing home">
+        </a>
+        <nav class="site-footer__nav" aria-label="Footer">
+            <a href="contact.html">CONTACT US</a>
+            <a href="sponsors.html">SPONSORS</a>
+            <a href="events.html">EVENTS</a>
+        </nav>
+        <div class="site-footer__contact">
+            <a class="site-footer__email" href="mailto:saeformula@byui.edu">saeformula@byui.edu</a>
+            <ul class="site-footer__social" aria-label="Social media">
+                <!-- Facebook is hidden until the team confirms its page URL. To enable, uncomment and set href:
+                <li><a class="site-footer__icon site-footer__icon--facebook" href="FACEBOOK_PAGE_URL" target="_blank" rel="noopener" aria-label="BYU-Idaho Racing on Facebook (opens in a new tab)"></a></li>
+                -->
+                <li><a class="site-footer__icon site-footer__icon--instagram" href="https://www.instagram.com/byui.formula.racing/" target="_blank" rel="noopener" aria-label="BYU-Idaho Racing on Instagram (opens in a new tab)"></a></li>
+                <li><a class="site-footer__icon site-footer__icon--linkedin" href="https://www.linkedin.com/company/byu-i-formula-racing/home/" target="_blank" rel="noopener" aria-label="BYU-Idaho Racing on LinkedIn (opens in a new tab)"></a></li>
+            </ul>
+        </div>
     </footer>
     
-    </div>
     </body>
     </html>

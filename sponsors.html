@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYU-Idaho Racing</title>
+    <title>Sponsors | BYU-Idaho Racing</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Encode+Sans+Condensed:wght@300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div id="MeetContent">
+<body class="sponsors-page">
     <header>
         <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick = "closeNav()">&times;</a>
@@ -22,7 +21,7 @@
                     <a class="navbutton" href="contact.html">CONTACT US</a>
                     <a class="navbutton" href="sponsors.html">SPONSORS</a>
                 </div>
-                
+
             </div>
         </div>
         <span class="menuicon" style="font-size:30px;cursor:pointer" onclick="openNav()"><img class="navicon" src="images/Hamburger_icon.svg.png" alt=""></span>
@@ -42,173 +41,136 @@
                 document.getElementById("mySidenav").style.width = "0";
                 document.body.style.backgroundColor = "white";
             }
-
-              let slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("ProjectMySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-            }
-
-
-            
         </script>
         <div class="HeaderBar">
             <a href="index.html" id="logo_link">
-                <img class="logo" src="images/BYU_Idaho_Racing_Logo_V2.webp" alt="BYU-Idaho Racing Logo">
+                <img class="logo" src="images/BYU_Idaho_Racing_Logo_V2_dark.png" alt="BYU-Idaho Racing Logo">
             </a>
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
+        </div>
     </header>
-    <div class="headerbottom"></div>
-    
-    <div class="Meet_headContainer">
 
-    
-    <div class="MeetTop">
-    </div>
-    <h1 class="SponsorsH1">OUR SPONSORS</h1>
-    <div class="MeetBottom">
-
-    </div>
-</div>
-    <div class="ProjectHolder">
-
-        <div class="ProjectArrowContainer">
-            <a onclick="plusSlides(1)" class="NextArrow">
-            </a>
-            <a onclick="plusSlides(-1)" class="PrevArrow">
-                
-            </a>
+    <main>
+        <div id="MeetContent">
+            <div class="Meet_headContainer">
+                <div class="MeetTop"></div>
+                <h1 class="SponsorsH1">OUR SPONSORS</h1>
+                <div class="MeetBottom"></div>
+            </div>
         </div>
-        <div class="SponsorsTitleHolder">
-            <h2>SPONSORS</h2>
+
+        <div class="sponsors">
+            <section class="sponsors-intro" aria-labelledby="sponsors-intro-heading">
+                <h2 id="sponsors-intro-heading" class="sponsor-section-title">Thank You to Our Sponsors</h2>
+                <p>
+                    BYU-Idaho Racing is a student-led team designing and building a fully electric, Formula-style race car.
+                    The organizations below help make that hands-on engineering experience possible.
+                </p>
+            </section>
+
+            <!--
+                HOW TO ADD A SPONSOR
+                1. Save the sponsor's logo in images/sponsors/ (create the folder if needed), e.g. images/sponsors/acme.png.
+                   A transparent PNG, SVG, or WebP works best. Any size or shape is fine; the card keeps its proportions.
+                2. Copy the template below into the matching list: "sponsor-grid--major" (major sponsors)
+                   or "sponsor-grid--supporting" (supporting sponsors). Remove a placeholder card if it replaces one.
+                   For a major sponsor, change class="sponsor-card" to class="sponsor-card sponsor-card--major".
+                3. Set href to the sponsor's website (full URL starting with https://), src to the logo path,
+                   alt to "<Sponsor name> logo", and the h3 text to the sponsor's name.
+                New cards flow into new rows automatically; no CSS changes are needed.
+
+                <li class="sponsor-card">
+                    <a class="sponsor-card__link" href="https://www.example.com" target="_blank" rel="noopener">
+                        <div class="sponsor-card__logo">
+                            <img src="images/sponsors/example.png" alt="Example Company logo">
+                        </div>
+                        <h3 class="sponsor-card__name">Example Company</h3>
+                        <span class="visually-hidden">(opens in a new tab)</span>
+                    </a>
+                </li>
+            -->
+
+            <section class="sponsor-tier" aria-labelledby="major-sponsors-heading">
+                <h2 id="major-sponsors-heading" class="sponsor-section-title">Major Sponsors</h2>
+                <ul class="sponsor-grid sponsor-grid--major">
+                    <!-- PLACEHOLDER: replace with a confirmed major sponsor -->
+                    <li class="sponsor-card sponsor-card--major sponsor-card--placeholder">
+                        <div class="sponsor-card__body">
+                            <div class="sponsor-card__logo sponsor-card__logo--empty">Logo coming soon</div>
+                            <h3 class="sponsor-card__name">Major Sponsor &mdash; To Be Confirmed</h3>
+                            <p class="sponsor-card__note">Placeholder: sponsor details have not been confirmed yet.</p>
+                        </div>
+                    </li>
+                    <!-- PLACEHOLDER: replace with a confirmed major sponsor -->
+                    <li class="sponsor-card sponsor-card--major sponsor-card--placeholder">
+                        <div class="sponsor-card__body">
+                            <div class="sponsor-card__logo sponsor-card__logo--empty">Logo coming soon</div>
+                            <h3 class="sponsor-card__name">Major Sponsor &mdash; To Be Confirmed</h3>
+                            <p class="sponsor-card__note">Placeholder: sponsor details have not been confirmed yet.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="sponsor-tier" aria-labelledby="supporting-sponsors-heading">
+                <h2 id="supporting-sponsors-heading" class="sponsor-section-title">Supporting Sponsors</h2>
+                <ul class="sponsor-grid sponsor-grid--supporting">
+                    <!-- PLACEHOLDER: replace with a confirmed supporting sponsor -->
+                    <li class="sponsor-card sponsor-card--placeholder">
+                        <div class="sponsor-card__body">
+                            <div class="sponsor-card__logo sponsor-card__logo--empty">Logo coming soon</div>
+                            <h3 class="sponsor-card__name">Sponsor &mdash; To Be Confirmed</h3>
+                        </div>
+                    </li>
+                    <!-- PLACEHOLDER: replace with a confirmed supporting sponsor -->
+                    <li class="sponsor-card sponsor-card--placeholder">
+                        <div class="sponsor-card__body">
+                            <div class="sponsor-card__logo sponsor-card__logo--empty">Logo coming soon</div>
+                            <h3 class="sponsor-card__name">Sponsor &mdash; To Be Confirmed</h3>
+                        </div>
+                    </li>
+                    <!-- PLACEHOLDER: replace with a confirmed supporting sponsor -->
+                    <li class="sponsor-card sponsor-card--placeholder">
+                        <div class="sponsor-card__body">
+                            <div class="sponsor-card__logo sponsor-card__logo--empty">Logo coming soon</div>
+                            <h3 class="sponsor-card__name">Sponsor &mdash; To Be Confirmed</h3>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="sponsor-cta" aria-labelledby="sponsor-cta-heading">
+                <h2 id="sponsor-cta-heading">Become a Sponsor</h2>
+                <p>
+                    Interested in supporting student engineers at BYU-Idaho? Reach out to the team to talk about sponsorship.
+                </p>
+                <!-- TODO: add a sponsorship email address here once the team confirms one. -->
+                <a class="sponsor-cta__button" href="https://www.instagram.com/byui.formula.racing/" target="_blank" rel="noopener">
+                    Message us on Instagram
+                    <span class="visually-hidden">(opens in a new tab)</span>
+                </a>
+            </section>
         </div>
-        <section class="CarouselProject">
+    </main>
 
-            <div class="ProjectCarouselContainer">
-            
-                    <div class="ProjectMySlides fade">
-                        <div class="ProjectDisplayContainer">
-                            <div class="ProjectContainerText1">
-                                <div class="ProjectTextHeader">
-                                    <h3>LOREM IPSUM</h3>
-                                </div>
-                                <div class="ProjectBodyText">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                                        culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="ProjectImageContainer1">
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="ProjectMySlides fade">
-                        <div class="ProjectDisplayContainer">
-                            <div class="ProjectContainerText2">
-                                <div class="ProjectTextHeader">
-                                    <h3>PROJECT 2</h3>
-                                </div>
-                                <div class="ProjectBodyText">
-                                    <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                                        cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                                        aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in 
-                                        culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="ProjectImageContainer2">
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="ProjectMySlides fade">
-                        <div class="ProjectDisplayContainer">
-                            <div class="ProjectContainerText3">
-                                <div class="ProjectTextHeader">
-                                    <h3>PROJECT 3</h3>
-                                </div>
-                                <div class="ProjectBodyText">
-                                    <p>
-                                        Excepteur sint occaecat cupidatat non proident, sunt in 
-                                        culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                                        cillum dolore eu fugiat nulla pariatur. 
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="ProjectImageContainer3">
-                            </div>
-                        </div>
-                    </div>
-                        
-                        </div>
-                    </div>
-
-                </div>
-        </section>
-    </div>
-
-    <div class=footer>
-    <div class="FooterTop"></div>
-<div class="LogoFooter"></div>
-<a href="contact.html" class="FooterItem">CONTACT US</a>
-<a href="sponsors.html" class="FooterItem">SPONSORS</a>
-<a href="events.html" class="FooterItem">EVENTS</a>
-<a href="#" class="Socials"></a>
-    </div>
-    
-    </div>
+    <footer class="site-footer">
+        <a class="site-footer__brand" href="index.html">
+            <img src="styles/BYU%20Idaho%20Racing%20Logo%20V2.png" alt="BYU-Idaho Racing home">
+        </a>
+        <nav class="site-footer__nav" aria-label="Footer">
+            <a href="contact.html">CONTACT US</a>
+            <a href="sponsors.html">SPONSORS</a>
+            <a href="events.html">EVENTS</a>
+        </nav>
+        <div class="site-footer__contact">
+            <a class="site-footer__email" href="mailto:saeformula@byui.edu">saeformula@byui.edu</a>
+            <ul class="site-footer__social" aria-label="Social media">
+                <!-- Facebook is hidden until the team confirms its page URL. To enable, uncomment and set href:
+                <li><a class="site-footer__icon site-footer__icon--facebook" href="FACEBOOK_PAGE_URL" target="_blank" rel="noopener" aria-label="BYU-Idaho Racing on Facebook (opens in a new tab)"></a></li>
+                -->
+                <li><a class="site-footer__icon site-footer__icon--instagram" href="https://www.instagram.com/byui.formula.racing/" target="_blank" rel="noopener" aria-label="BYU-Idaho Racing on Instagram (opens in a new tab)"></a></li>
+                <li><a class="site-footer__icon site-footer__icon--linkedin" href="https://www.linkedin.com/company/byu-i-formula-racing/home/" target="_blank" rel="noopener" aria-label="BYU-Idaho Racing on LinkedIn (opens in a new tab)"></a></li>
+            </ul>
+        </div>
+    </footer>
     </body>
     </html>
